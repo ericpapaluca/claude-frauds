@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon Factory Pipeline</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>Hackathon Factory Pipeline</h1>
+            <span class="subtitle">End-to-end multi-agent orchestration</span>
+        </div>
+        <div class="header-controls">
+            <button id="btn-replay" class="replay-btn">▶ Replay WattWatch</button>
+            <button id="btn-generate" class="generate-btn">⚡ Generate New Idea</button>
+            <div class="speed-controls">
+                <button id="btn-instant" class="speed-btn active">Instant</button>
+                <button id="btn-5x" class="speed-btn">5x</button>
+                <button id="btn-1x" class="speed-btn">1x</button>
+                <button id="btn-live" class="speed-btn">Live</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="stage completed" id="stage-ideation">Ideation</div>
+        <div class="stage-arrow">→</div>
+        <div class="stage" id="stage-consensus">Consensus</div>
+        <div class="stage-arrow">→</div>
+        <div class="stage" id="stage-handoff">Handoff</div>
+        <div class="stage-arrow">→</div>
+        <div class="stage" id="stage-build">Build</div>
+        <div class="stage-arrow">→</div>
+        <div class="stage" id="stage-complete">Complete</div>
+    </div>
+
+    <main>
+        <!-- Layer 1: Ideas Factory -->
+        <section class="layer" id="layer-ideas">
+            <div class="layer-header">
+                <h2>Layer 1: Ideas Factory</h2>
+                <span class="layer-status" id="ideas-status">waiting</span>
+            </div>
+            <div class="agent-row">
+                <div class="agent-chip coordinator" id="agent-coordinator">
+                    <span class="agent-dot"></span>
+                    Hackathon Lead Engineer
+                </div>
+            </div>
+            <div class="agent-row">
+                <div class="agent-chip" id="agent-data" data-agent="Data Engineering SME">
+                    <span class="agent-dot"></span>
+                    Data Eng
+                </div>
+                <div class="agent-chip" id="agent-ai" data-agent="AI Engineering SME">
+                    <span class="agent-dot"></span>
+                    AI/ML
+                </div>
+                <div class="agent-chip" id="agent-platform" data-agent="Platform Engineering SME">
+                    <span class="agent-dot"></span>
+                    Platform
+                </div>
+                <div class="agent-chip" id="agent-security" data-agent="Security Engineering SME">
+                    <span class="agent-dot"></span>
+                    Security
+                </div>
+            </div>
+            <div class="message-stream" id="ideas-messages"></div>
+        </section>
+
+        <!-- Handoff -->
+        <div class="handoff-section" id="handoff">
+            <div class="handoff-line"></div>
+            <div class="handoff-badge">📄 Proposal Handoff</div>
+            <div class="handoff-line"></div>
+        </div>
+
+        <!-- Layer 2: Implementation Swarm -->
+        <section class="layer" id="layer-impl">
+            <div class="layer-header">
+                <h2>Layer 2: Implementation Swarm</h2>
+                <span class="layer-status" id="impl-status">waiting</span>
+            </div>
+            <div class="agent-row">
+                <div class="agent-chip coordinator" id="agent-techlead">
+                    <span class="agent-dot"></span>
+                    Tech Lead
+                </div>
+            </div>
+            <div class="agent-row">
+                <div class="agent-chip" id="agent-frontend" data-agent="Frontend Developer">
+                    <span class="agent-dot"></span>
+                    Frontend
+                </div>
+                <div class="agent-chip" id="agent-backend" data-agent="Backend Developer">
+                    <span class="agent-dot"></span>
+                    Backend
+                </div>
+                <div class="agent-chip" id="agent-devops" data-agent="DevOps Engineer">
+                    <span class="agent-dot"></span>
+                    DevOps
+                </div>
+                <div class="agent-chip" id="agent-qa" data-agent="QA Engineer">
+                    <span class="agent-dot"></span>
+                    QA
+                </div>
+            </div>
+            <div class="message-stream" id="impl-messages"></div>
+        </section>
+
+        <!-- Pipeline Complete -->
+        <div class="complete-section" id="complete-section" style="display:none">
+            <div class="complete-badge">Pipeline Complete</div>
+            <a href="http://localhost:5173" target="_blank" class="launch-demo-btn" id="launch-demo">
+                🚀 Launch Demo
+            </a>
+            <p class="demo-hint">Opens the working application built by the Implementation Swarm</p>
+        </div>
+    </main>
+
+    <footer>
+        <span id="event-counter">0 events loaded</span>
+        <span id="data-source">No data</span>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
