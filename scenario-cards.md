@@ -1,62 +1,71 @@
-# Scenario Cards — Option 3
+# Scenario Cards — Hackathon Ideas Factory
 
-Each team picks ONE scenario. Each is shaped like real services-firm work: a coordinator who orchestrates and 3-5 specialists who own lanes.
-
----
-
-## Card A — Deal Desk (default scenario, fully wired in starter code)
-
-**Coordinator:** "Senior Partner — Deal Desk Lead"
-- Reads an inbound RFP
-- Routes work to specialists
-- Synthesises specialist outputs into a branded proposal doc
-
-**Specialists:**
-1. **Pricing Specialist** (skill: pricing-playbook) — decides commercial terms based on RFP scope and past wins
-2. **Legal Reviewer** (skill: legal-checklist) — flags risky RFP requirements and recommends contract positions
-3. **Technical Fit** (skill: product-overview) — assesses whether our product covers the RFP's requirements
-4. **Competitive Intel** (skill: competitive-intel) — identifies which competitors are likely in this deal and how to position
-
-**The trigger:** `synthetic-data/rfp-acme-corp.md` (an RFP from Acme Corp for an enterprise data platform)
-
-**The deliverable:** A branded Word document at `outputs/proposal-response.docx`
+Each scenario represents a different hackathon theme. Each is shaped like real engineering work: a lead engineer orchestrates and 4 domain specialists own their lanes.
 
 ---
 
-## Card B — M&A Diligence Lite
+## Card A — Climate Tech IoT (default scenario, fully wired in starter code)
 
-**Coordinator:** "M&A Lead"
-- Reads a deal memo and the target's data room
-- Routes diligence work to specialists
-- Produces a structured risk-and-recommendation memo
+**Coordinator:** "Hackathon Lead Engineer"
+- Reads the hackathon challenge
+- Brainstorms 2-3 project ideas
+- Routes all ideas to specialists for comparative evaluation
+- Synthesizes assessments into a complete implementation plan
 
 **Specialists:**
-1. **Financial Analyst** — reviews the target's financials, flags concerns
-2. **Legal Diligence** — scans contracts for change-of-control clauses, IP issues, litigation
-3. **Tech Stack Assessor** — evaluates technical debt, integration complexity
-4. **People & Culture** — assesses leadership, retention risk
+1. **Data Engineering SME** (skill: data-engineering-patterns) — evaluates data architecture, pipeline feasibility, scalability
+2. **AI Engineering SME** (skill: ai-engineering-playbook) — assesses ML/AI components, model selection, integration complexity
+3. **Platform Engineering SME** (skill: platform-architecture-guide) — reviews infrastructure, deployment strategy, operational feasibility
+4. **Security Engineering SME** (skill: security-checklist) — identifies security risks, compliance issues, quick wins
 
-**The trigger:** A synthetic data room (you'll need to extend `synthetic-data/` for this one)
+**The trigger:** `synthetic-data/hackathon-challenge-climate-iot.md` (a 48-hour challenge to build carbon footprint monitoring for industrial facilities)
 
-**The deliverable:** A diligence memo in docx
+**The deliverable:** A structured markdown implementation plan at `outputs/[Idea-Name]-Proposal.md` with:
+- Executive summary
+- Technical architecture (data + AI + platform + security)
+- Phased implementation plan (Hours 0-12, 12-24, 24-36, 36-48)
+- Resource requirements and cost estimates
+- Risk assessment and demo strategy
 
 ---
 
-## Card C — Hire-to-Onboard Orchestrator
+## Card B — FinTech Innovation (alternative scenario)
 
-**Coordinator:** "Onboarding Lead"
-- Takes a new hire's profile and start date
-- Coordinates the four functions that have to be ready by day 1
+**Coordinator:** "Hackathon Lead Engineer"
+- Reads the hackathon challenge
+- Brainstorms 2-3 project ideas
+- Routes all ideas to specialists for evaluation
+- Produces implementation plan
 
 **Specialists:**
-1. **Recruiter** — confirms offer terms, captures references status
-2. **IT Provisioning** — generates the laptop + accounts checklist
-3. **Onboarding Buddy Match** — picks a buddy based on team and seniority
-4. **Welcome Packet** — generates personalised welcome content
+1. **Data Engineering SME** — evaluates financial data pipelines, real-time processing
+2. **AI Engineering SME** — assesses fraud detection, credit scoring, personalization ML
+3. **Platform Engineering SME** — reviews API design, payment integration, scalability
+4. **Security Engineering SME** — identifies PCI-DSS compliance, fraud prevention, auth security
 
-**The trigger:** A synthetic new-hire-profile.md
+**The trigger:** A synthetic FinTech challenge (you'll need to create `hackathon-challenge-fintech.md`)
 
-**The deliverable:** A day-1 readiness pack in docx
+**The deliverable:** Implementation plan markdown with focus on compliance and security
+
+---
+
+## Card C — Healthcare Tech (alternative scenario)
+
+**Coordinator:** "Hackathon Lead Engineer"
+- Reads the hackathon challenge
+- Brainstorms 2-3 project ideas
+- Routes all ideas to specialists for evaluation
+- Produces implementation plan
+
+**Specialists:**
+1. **Data Engineering SME** — evaluates patient data pipelines, FHIR integration, time-series health metrics
+2. **AI Engineering SME** — assesses diagnostic AI, patient risk prediction, NLP for medical records
+3. **Platform Engineering SME** — reviews telehealth infrastructure, EMR integration, mobile app deployment
+4. **Security Engineering SME** — identifies HIPAA compliance, PHI protection, access controls
+
+**The trigger:** A synthetic Healthcare challenge (you'll need to create `hackathon-challenge-healthtech.md`)
+
+**The deliverable:** Implementation plan markdown with heavy focus on compliance and patient privacy
 
 ---
 
@@ -64,6 +73,6 @@ Each team picks ONE scenario. Each is shaped like real services-firm work: a coo
 
 | If your team is... | Pick |
 | --- | --- |
-| Just want the cleanest path | A (Deal Desk — code is ready) |
-| Most senior partner audience | B (M&A — gravitas) |
-| Most relatable to HR / people-ops clients | C (Hiring) |
+| Just want the cleanest path | A (Climate Tech IoT — code is ready) |
+| Working on FinTech products | B (FinTech — requires custom challenge file) |
+| Working on Healthcare products | C (Healthcare — requires custom challenge file) |
