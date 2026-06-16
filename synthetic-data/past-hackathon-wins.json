@@ -1,0 +1,172 @@
+[
+  {
+    "name": "SmartGrid Optimizer",
+    "hackathon": "EnergyHack 2025",
+    "challenge_type": "Energy efficiency",
+    "team_size": 3,
+    "placement": "1st place",
+    "tech_stack": {
+      "frontend": "React + Recharts",
+      "backend": "FastAPI (Python)",
+      "database": "PostgreSQL (Supabase)",
+      "ml": "Prophet (time-series forecasting)",
+      "hosting": "Vercel (frontend) + Render (backend)"
+    },
+    "what_worked": [
+      "Simple, focused problem: predict energy demand 24 hours ahead",
+      "Used free-tier Prophet model - no custom training needed",
+      "Clean dashboard with just 3 key metrics (no overwhelming data dump)",
+      "Demo with realistic synthetic data showing 15% cost savings",
+      "Had fallback cached predictions in case API failed during demo"
+    ],
+    "what_didnt": [
+      "Initially tried real-time streaming - too complex, scrapped it",
+      "Spent 6 hours on fancy animations that judges didn't care about",
+      "First database choice (MongoDB) didn't fit time-series data well, migrated to Postgres"
+    ],
+    "key_insight": "Judges cared more about 'would this work in production' than flashy tech. Simple + working beats complex + broken.",
+    "github_url": "https://github.com/example/smartgrid-optimizer",
+    "time_breakdown": {
+      "hours_0_12": "Setup, data pipeline, basic ML integration",
+      "hours_12_24": "Frontend dashboard, connecting pieces",
+      "hours_24_36": "Polish, handle edge cases, deploy to production",
+      "hours_36_48": "Demo rehearsal, backup video, fix last-minute bugs"
+    }
+  },
+  {
+    "name": "AirQuality Alert",
+    "hackathon": "Urban Tech Challenge 2025",
+    "challenge_type": "Smart cities / IoT",
+    "team_size": 4,
+    "placement": "2nd place",
+    "tech_stack": {
+      "frontend": "Next.js",
+      "backend": "Serverless functions (Vercel)",
+      "database": "Firebase Realtime Database",
+      "ml": "Claude API for natural language alerts",
+      "hosting": "Vercel (full-stack)"
+    },
+    "what_worked": [
+      "Focused on ONE persona: parents with kids who have asthma",
+      "SMS alerts when air quality drops (Twilio free tier)",
+      "Claude generated human-friendly explanations: 'Air quality is unhealthy - keep windows closed today'",
+      "Mobile-first design (judges tested on phones)",
+      "Live demo with real public API (PurpleAir sensor network)"
+    ],
+    "what_didnt": [
+      "Firebase had cold start issues - first query took 8 seconds",
+      "Tried to add too many features (pollen, UV index) - cut back to just AQI",
+      "Initial SMS wording was too technical - iterated based on mentor feedback"
+    ],
+    "key_insight": "Using Claude API for NL generation was huge win - turned technical data into actionable advice. Judges loved the 'friendly assistant' vibe vs raw numbers.",
+    "github_url": "https://github.com/example/airquality-alert",
+    "time_breakdown": {
+      "hours_0_12": "API integration, basic alert logic",
+      "hours_12_24": "Frontend, SMS integration with Twilio",
+      "hours_24_36": "Claude integration for NL explanations, mobile responsiveness",
+      "hours_36_48": "User testing with mentors, iterating on copy"
+    }
+  },
+  {
+    "name": "FoodWaste Tracker",
+    "hackathon": "Sustainability Hack 2024",
+    "challenge_type": "Climate / Waste reduction",
+    "team_size": 2,
+    "placement": "3rd place",
+    "tech_stack": {
+      "frontend": "Vue.js + Vuetify",
+      "backend": "Flask (Python)",
+      "database": "SQLite (local file)",
+      "ml": "OpenAI GPT-4 Vision for receipt scanning",
+      "hosting": "Railway"
+    },
+    "what_worked": [
+      "GPT-4 Vision scanned grocery receipts and extracted items automatically (no manual entry)",
+      "Sent expiration reminders via email (simple cron job)",
+      "Carbon footprint estimates per item (referenced USDA database)",
+      "Worked entirely offline after initial setup (SQLite local-first)",
+      "Pitch emphasized '$500/year savings per household' - judges loved concrete ROI"
+    ],
+    "what_didnt": [
+      "GPT-4 Vision API was expensive - burned through $15 credit in testing",
+      "Receipt scanning accuracy was 80% - needed manual corrections",
+      "Tried to add meal planning feature - ran out of time, cut it"
+    ],
+    "key_insight": "The 'magic moment' (scan receipt, instant inventory) carried the demo. Everything else was secondary. Nail ONE wow factor.",
+    "github_url": "https://github.com/example/foodwaste-tracker",
+    "time_breakdown": {
+      "hours_0_12": "Receipt parsing with GPT-4 Vision, data model design",
+      "hours_12_24": "Expiration tracking logic, email reminders",
+      "hours_24_36": "Frontend UI, carbon footprint calculations",
+      "hours_36_48": "Demo polish, backup images for receipt scanning"
+    }
+  },
+  {
+    "name": "WaterSense Monitor",
+    "hackathon": "AgTech Innovation 2025",
+    "challenge_type": "Agriculture / Water conservation",
+    "team_size": 3,
+    "placement": "Finalist (Top 10)",
+    "tech_stack": {
+      "frontend": "Streamlit (Python - rapid prototyping)",
+      "backend": "None (Streamlit is full-stack)",
+      "database": "Pandas DataFrames (in-memory)",
+      "ml": "scikit-learn (anomaly detection)",
+      "hosting": "Streamlit Cloud (free)"
+    },
+    "what_worked": [
+      "Streamlit = 0 frontend code needed, pure Python full-stack",
+      "Deployed in 10 minutes (literally just `streamlit run app.py`)",
+      "Anomaly detection found 'leaky irrigation zones' saving 20% water",
+      "Interactive sliders let judges explore different scenarios",
+      "All synthetic data (convincingly realistic using Faker library)"
+    ],
+    "what_didnt": [
+      "Streamlit UI looks generic - no custom branding",
+      "Not mobile-friendly (Streamlit limitation)",
+      "In-memory data = lost state on refresh (needed persistence)"
+    ],
+    "key_insight": "Speed matters. Streamlit let us iterate 3x faster than building separate frontend/backend. Trade polish for velocity in hackathons.",
+    "github_url": "https://github.com/example/watersense-monitor",
+    "time_breakdown": {
+      "hours_0_12": "Data generation, ML model training",
+      "hours_12_24": "Streamlit UI, interactive charts",
+      "hours_24_36": "Anomaly detection integration, scenario modeling",
+      "hours_36_48": "Demo refinement, documentation"
+    }
+  },
+  {
+    "name": "BusyBee (Coworking Occupancy Predictor)",
+    "hackathon": "Future of Work Hack 2024",
+    "challenge_type": "Workplace optimization",
+    "team_size": 4,
+    "placement": "1st place",
+    "tech_stack": {
+      "frontend": "React + Material-UI",
+      "backend": "Node.js + Express",
+      "database": "MongoDB Atlas (free tier)",
+      "ml": "TensorFlow.js (client-side ML)",
+      "hosting": "Netlify (frontend) + Heroku (backend)"
+    },
+    "what_worked": [
+      "Predicted coworking space occupancy to help remote workers plan their day",
+      "TensorFlow.js ran predictions client-side (no backend ML infrastructure)",
+      "Google Calendar integration showed 'your usual crowd' is coming today",
+      "Live desk availability heatmap (updated every 5 min)",
+      "Judges loved the 'social' angle - not just optimization, but community"
+    ],
+    "what_didnt": [
+      "Heroku free tier spun down after 30 min idle - caused lag during judging",
+      "MongoDB schema was overcomplicated - should've used Postgres",
+      "Spent 8 hours on auth (OAuth) that wasn't critical for demo"
+    ],
+    "key_insight": "Winning pitch framed it as 'Waze for coworking' - familiar analogy made judges immediately get it. Analogies > technical explanations.",
+    "github_url": "https://github.com/example/busybee",
+    "time_breakdown": {
+      "hours_0_12": "Data scraping, initial ML model",
+      "hours_12_24": "Frontend, Google Calendar API integration",
+      "hours_24_36": "TensorFlow.js client-side predictions, heatmap visualization",
+      "hours_36_48": "Demo flow rehearsal, backup static predictions"
+    }
+  }
+]
