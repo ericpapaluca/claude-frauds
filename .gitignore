@@ -1,0 +1,21 @@
+# Agent state files (regenerated per run)
+.coordinator_id
+.environment_id
+.implementation_coordinator_id
+.implementation_specialist_ids.json
+.last_implementation_session_id
+.last_session_id
+.skill_ids.json
+.specialist_ids.json
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Live event files (ephemeral)
+outputs/live-factory-events.json
+implementation/live-impl-events.json
